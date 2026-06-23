@@ -329,6 +329,40 @@ padding:10px;
 background:#38bdf8;
 border:none;
 cursor: pointer;
+border-radius: 6px;
+font-weight: 600;
+transition: all 0.3s ease;
+}
+
+button:hover{
+background:#00adb5;
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+.contact-buttons{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.contact-buttons button{
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+}
+
+.whatsapp-btn{
+    background: #25D366 !important;
+    color: white !important;
+}
+
+.whatsapp-btn:hover{
+    background: #128C7E !important;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3) !important;
 }
 
 footer{

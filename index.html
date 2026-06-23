@@ -436,7 +436,12 @@
 
             <textarea name="message" placeholder="Write your message here..." rows="6" required></textarea>
 
-            <button type="submit">Send Message</button>
+            <div class="contact-buttons">
+                <button type="submit">Send Message</button>
+                <button type="button" id="whatsapp-btn" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </button>
+            </div>
 
         </form>
         <p id="status"></p>
@@ -455,6 +460,9 @@
 
             <a href="mailto:amanpc257@gmail.com">
                 <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/919783204194" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
             </a>
 
         </div>
@@ -501,6 +509,26 @@
                         console.log(error);
                     });
 
+            });
+
+        document.getElementById("whatsapp-btn")
+            .addEventListener("click", function () {
+                const name = document.querySelector('#contact-form [name="name"]').value;
+                const email = document.querySelector('#contact-form [name="email"]').value;
+                const subject = document.querySelector('#contact-form [name="subject"]').value;
+                const message = document.querySelector('#contact-form [name="message"]').value;
+
+                if (!name || !email || !subject || !message) {
+                    alert("Please fill in all the fields before sending via WhatsApp.");
+                    return;
+                }
+
+                const whatsappNumber = "919783204194";
+                const text = `Hello Aman,\n\nMy name is *${name}* (${email}).\n\n*Subject:* ${subject}\n\n*Message:*\n${message}`;
+                const encodedText = encodeURIComponent(text);
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+                window.open(whatsappUrl, "_blank");
             });
 
     </script>
