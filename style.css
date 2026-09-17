@@ -1078,19 +1078,19 @@ footer {
 
 @media (max-width: 768px) {
     section {
-        padding: 70px 20px;
+        padding: 60px 18px;
     }
 
     .hero {
-        padding-top: 90px;
+        padding-top: 85px;
     }
 
     .hero-text h1 {
-        font-size: 2.4rem;
+        font-size: 2.3rem;
     }
 
     .hero-text h2 {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
     }
 
     .nav-links {
@@ -1099,6 +1099,77 @@ footer {
 
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-box {
+        padding: 20px;
+        gap: 14px;
+    }
+
+    /* Mobile Project Cards Optimization: Compact & Short */
+    .project-bento {
+        gap: 18px;
+    }
+
+    .project-card {
+        padding: 20px 18px;
+        border-radius: var(--radius-md);
+    }
+
+    .project-card.featured-primary {
+        padding: 22px 18px;
+    }
+
+    .project-top {
+        margin-bottom: 12px;
+    }
+
+    .project-badge {
+        margin-bottom: 8px;
+        font-size: 0.68rem;
+        padding: 3px 8px;
+    }
+
+    .project-top h3,
+    .featured-primary .project-top h3 {
+        font-size: 1.25rem;
+        margin-bottom: 6px;
+    }
+
+    .project-desc {
+        font-size: 0.88rem;
+        line-height: 1.45;
+        margin-bottom: 12px;
+    }
+
+    .project-tags {
+        gap: 6px;
+        margin-bottom: 0;
+    }
+
+    .project-tag {
+        font-size: 0.72rem;
+        padding: 3px 7px;
+    }
+
+    /* Hide bulky bullet list on mobile for compact card height */
+    .project-bullets {
+        display: none;
+    }
+
+    /* Keep action buttons side-by-side on mobile instead of tall vertical stack */
+    .project-links {
+        flex-direction: row !important;
+        gap: 8px;
+        padding-top: 14px;
+    }
+
+    .project-btn {
+        padding: 9px 12px;
+        font-size: 0.82rem;
+        flex: 1 !important;
+        width: auto !important;
     }
 
     .highlights {
@@ -1123,16 +1194,28 @@ footer {
         width: 100%;
     }
 
-    .btn {
+    .hero-buttons .btn {
         width: 100%;
     }
 
+    .project-card {
+        padding: 18px 16px;
+    }
+
+    /* Ensure project action buttons stay side-by-side even on small phones */
     .project-links {
-        flex-direction: column;
+        flex-direction: row !important;
+        gap: 6px;
+    }
+
+    .project-btn {
+        padding: 8px 10px;
+        font-size: 0.78rem;
+        gap: 5px;
     }
 
     .about-card,
     .contact-form-card {
-        padding: 24px;
+        padding: 20px 16px;
     }
 }
