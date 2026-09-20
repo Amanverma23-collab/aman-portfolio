@@ -1418,12 +1418,13 @@ footer {
     }
 
     .project-bento {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
     }
 
     .project-card.featured-primary {
-        padding: 28px 24px;
+        grid-column: auto;
+        padding: 24px 20px;
     }
 
     .contact-wrap {
@@ -1594,50 +1595,103 @@ footer {
         font-size: 0.86rem;
     }
 
-    /* Projects Section */
+    /* Projects Section: 2 Cards Per Row (Mobile View Compact) */
+    .project-bento {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
+    }
+
     .project-card {
-        padding: 24px 18px;
+        padding: 14px 12px;
+        border: 2px solid #000000;
         border-radius: var(--radius-md);
-        box-shadow: var(--shadow-md);
+        box-shadow: var(--shadow-sm);
     }
 
     .project-card.featured-primary {
-        padding: 24px 18px;
+        grid-column: auto !important;
+        padding: 14px 12px;
+        border: 2px solid #000000;
+        box-shadow: var(--shadow-sm);
     }
 
-    .project-top h3 {
-        font-size: 1.35rem;
+    .project-top {
+        margin-bottom: 6px;
     }
 
+    .project-badge {
+        font-size: 0.62rem;
+        padding: 2px 6px;
+        margin-bottom: 6px;
+        border: 1.5px solid #000000;
+        box-shadow: 1.5px 1.5px 0 #000000;
+        letter-spacing: 0.02em;
+    }
+
+    .project-top h3,
     .featured-primary .project-top h3 {
-        font-size: 1.45rem;
+        font-size: 0.96rem;
+        margin-bottom: 4px;
+        line-height: 1.25;
     }
 
     .project-desc {
-        font-size: 0.92rem;
-        line-height: 1.55;
-        margin-bottom: 14px;
+        font-size: 0.78rem;
+        line-height: 1.35;
+        margin-bottom: 8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .project-tags {
-        gap: 6px;
-        margin-bottom: 16px;
+        gap: 4px;
+        margin-bottom: 8px;
     }
 
     .project-tag {
-        font-size: 0.74rem;
-        padding: 3px 8px;
+        font-size: 0.65rem;
+        padding: 2px 6px;
+        border: 1px solid #000000;
+        box-shadow: 1px 1px 0 #000000;
+        border-radius: 3px;
     }
 
-    .project-bullets li {
-        font-size: 0.86rem;
-        line-height: 1.45;
-        padding-left: 18px;
+    /* Hide bulky bullet list on mobile for compact card height */
+    .project-bullets {
+        display: none !important;
     }
 
+    /* Keep action buttons side-by-side */
     .project-links {
-        padding-top: 18px;
-        gap: 10px;
+        display: flex;
+        flex-direction: row !important;
+        gap: 6px;
+        padding-top: 8px;
+        margin-top: auto;
+        border-top: 1.5px dashed #000000;
+    }
+
+    .project-btn {
+        flex: 1 !important;
+        width: auto !important;
+        min-height: 32px;
+        padding: 6px 4px;
+        font-size: 0.72rem;
+        font-weight: 800;
+        border: 1.5px solid #000000;
+        box-shadow: 1.5px 1.5px 0 #000000;
+        border-radius: 4px;
+        justify-content: center;
+        gap: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .project-btn i {
+        font-size: 0.72rem;
     }
 
     /* Contact Section */
@@ -1771,19 +1825,6 @@ footer {
         min-height: 48px;
         justify-content: center;
     }
-
-    .project-links {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .project-btn {
-        width: 100%;
-        min-height: 44px;
-        padding: 11px 16px;
-        font-size: 0.88rem;
-        justify-content: center;
-    }
 }
 
 /* Compact Mobile Screens (<= 480px) */
@@ -1886,12 +1927,51 @@ footer {
         padding: 12px 12px;
     }
 
-    .project-card {
-        padding: 18px 14px;
+    .project-bento {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
     }
 
-    .project-top h3 {
-        font-size: 1.22rem;
+    .project-card,
+    .project-card.featured-primary {
+        padding: 12px 10px;
+    }
+
+    .project-top h3,
+    .featured-primary .project-top h3 {
+        font-size: 0.88rem;
+    }
+
+    .project-badge {
+        font-size: 0.58rem;
+        padding: 2px 5px;
+    }
+
+    .project-desc {
+        font-size: 0.72rem;
+        line-height: 1.3;
+        margin-bottom: 6px;
+    }
+
+    .project-tag {
+        font-size: 0.62rem;
+        padding: 2px 5px;
+    }
+
+    .project-links {
+        gap: 4px;
+        padding-top: 6px;
+    }
+
+    .project-btn {
+        min-height: 30px;
+        padding: 5px 3px;
+        font-size: 0.68rem;
+        gap: 3px;
+    }
+
+    .project-btn i {
+        font-size: 0.68rem;
     }
 
     .contact-form-card {
@@ -1949,6 +2029,53 @@ footer {
 
     .stat-label {
         font-size: 0.58rem;
+    }
+
+    .project-bento {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px;
+    }
+
+    .project-card,
+    .project-card.featured-primary {
+        padding: 10px 7px;
+    }
+
+    .project-top h3,
+    .featured-primary .project-top h3 {
+        font-size: 0.82rem;
+    }
+
+    .project-badge {
+        font-size: 0.54rem;
+        padding: 1px 4px;
+    }
+
+    .project-desc {
+        font-size: 0.68rem;
+        line-height: 1.25;
+        margin-bottom: 5px;
+    }
+
+    .project-tag {
+        font-size: 0.56rem;
+        padding: 1px 4px;
+    }
+
+    .project-links {
+        gap: 3px;
+        padding-top: 5px;
+    }
+
+    .project-btn {
+        min-height: 28px;
+        padding: 4px 2px;
+        font-size: 0.62rem;
+        gap: 2px;
+    }
+
+    .project-btn i {
+        font-size: 0.62rem;
     }
 
     .channel-text p {
