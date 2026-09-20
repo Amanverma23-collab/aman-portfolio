@@ -118,3 +118,25 @@ window.addEventListener('load', () => {
         window.scrollTo(0, 0);
     }
 });
+
+// Contact Channel Handlers: Ensure Direct Email & WhatsApp work reliably
+const emailChannel = document.getElementById("email-channel");
+if (emailChannel) {
+    emailChannel.addEventListener("click", function () {
+        // Copy email to clipboard automatically as a reliable fallback
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText("amanvermaverma257@gmail.com").then(() => {
+                const toastEl = document.getElementById("toast");
+                if (toastEl) {
+                    const toastSpan = toastEl.querySelector("span");
+                    if (toastSpan) toastSpan.textContent = "Email copied to clipboard & opening mail!";
+                    toastEl.classList.add("show");
+                    setTimeout(() => {
+                        toastEl.classList.remove("show");
+                        if (toastSpan) toastSpan.textContent = "Inquiry sent successfully!";
+                    }, 3000);
+                }
+            }).catch(() => {});
+        }
+    });
+}
