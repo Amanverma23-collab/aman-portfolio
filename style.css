@@ -962,27 +962,39 @@ section {
 }
 
 .project-card:nth-child(3) .project-badge {
-    background: var(--neo-blue); /* Trisecure */
+    background: var(--neo-coral); /* Hotel Jangid */
 }
 
 .project-card:nth-child(4) .project-badge {
-    background: var(--neo-cyan); /* Denta Proof */
+    background: var(--neo-yellow); /* P Academy Gym */
 }
 
 .project-card:nth-child(5) .project-badge {
-    background: var(--neo-orange); /* Oxygen Gym */
+    background: var(--neo-blue); /* Patel Packers & Movers */
 }
 
 .project-card:nth-child(6) .project-badge {
-    background: var(--neo-pink); /* Officers Saga */
+    background: var(--neo-cyan); /* Trisecure */
 }
 
 .project-card:nth-child(7) .project-badge {
-    background: var(--neo-yellow); /* Neo Relocations */
+    background: var(--neo-pink); /* Denta Proof */
 }
 
 .project-card:nth-child(8) .project-badge {
-    background: var(--neo-lime); /* Vaibhav Groups */
+    background: var(--neo-orange); /* Oxygen Gym */
+}
+
+.project-card:nth-child(9) .project-badge {
+    background: var(--neo-purple-light); /* Officers Saga */
+}
+
+.project-card:nth-child(10) .project-badge {
+    background: var(--neo-lime); /* Neo Relocations */
+}
+
+.project-card:nth-child(11) .project-badge {
+    background: var(--neo-blue-light); /* Vaibhav Groups */
 }
 
 .project-top h3 {
